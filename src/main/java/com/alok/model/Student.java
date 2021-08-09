@@ -1,0 +1,53 @@
+package com.alok.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Student {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+    int roll;
+    String name;
+    String address;
+    int marks;
+    
+    Student(){
+    	
+    }
+    public Student(int roll, String name, String address, int marks) {
+		super();
+		this.roll = roll;
+		this.name = name;
+		this.address = address;
+		this.marks = marks;
+	}
+	public int getRoll() {
+		return roll;
+	}
+	public void setRoll(int roll) {
+		this.roll = roll;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public int getMarks() {
+		return marks;
+	}
+	public void setMarks(int marks) {
+		this.marks = marks;
+	}
+	
+}
